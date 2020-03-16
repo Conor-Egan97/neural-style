@@ -8,7 +8,7 @@ import scipy.io
 # https://github.com/tensorflow/tensorflow/issues/24496
 config = tf.compat.v1.ConfigProto()
 config.gpu_options.allow_growth = True
-sess = tf.Session(config=config)
+sess = tf.compat.v1.Session(config=config)
 
 VGG19_LAYERS = (
     'conv1_1', 'relu1_1', 'conv1_2', 'relu1_2', 'pool1',
