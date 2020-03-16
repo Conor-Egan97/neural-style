@@ -6,7 +6,7 @@ import scipy.io
 
 # work-around for more recent versions of tensorflow
 # https://github.com/tensorflow/tensorflow/issues/24496
-config = tf.ConfigProto()
+config = tf.compat.v1.ConfigProto()
 config.gpu_options.allow_growth = True
 sess = tf.Session(config=config)
 
